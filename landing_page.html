@@ -11,53 +11,70 @@
 </head>
 
 <body>
-    <form action="/fcbsix/new" method="POST" class="col g-3" id="form-container">
-        {% csrf_token %}
-        <div class="col-md">
-            <div class="form-outline py-2">
-                <label class="form-label">Nome*</label>
-                <input name="name" type="text" class="form-control" required />
-            </div>
+    <img class="top-bar" src="/static/fcbsix/images/top-bar.png">
+
+    <div class="ebook-form-container">
+        <div class="capa-ebook">
+            <img src="/static/fcbsix/images/capa-ebook.png">
         </div>
 
-        <div class="col-md">
-            <div class="form-outline py-2">
-                <label class="form-label">Email*</label>
-                <input name="email" type="email" class="form-control" required />
-            </div>
+        <div>
+            <h1 class="ebook-title">
+                Quer saber mais?
+            </h1>
+            <h2 class="ebook-subtitle">Baixe aqui o paper completo!</h2>
+
+            <form action="/fcbsix/new" method="POST" class="row g-3" id="form-container">
+                {% csrf_token %}
+                <div class="col-md-12">
+                    <div class="form-outline">
+                        <label class="form-label">Nome*</label>
+                        <input type="text" name="name" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-outline">
+                        <label class="form-label">Email*</label>
+                        <input type="email" name="email" class="form-control" required />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-outline">
+                        <label class="form-label">Empresa*</label>
+                        <input type="email" name="company" class="form-control" required />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-outline">
+                        <label class="form-label">Cargo*</label>
+                        <input type="text" name="role" class="form-control" required />
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input " type="checkbox" value="" id="invalidCheck2" required />
+                        <label class="form-check-label " for="invalidCheck2">
+                            Eu concordo em receber comunicações via <br> e-mail ou redes sociais.
+                        </label>
+                        <p class="final-text">Ao informar meus dados, eu concordo com a <a
+                                href="/static/fcbsix/Política de Privacidade-FCBSIX.pdf" target="_blank">Política
+                                de
+                                Privacidade</a> da FCBSix.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-warning" type="submit">Baixar o e-book</button>
+                </div>
+            </form>
         </div>
-        <div class="col-md">
-            <div class="form-outline py-2">
-                <label class="form-label">Empresa*</label>
-                <input type="text" class="form-control" required />
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="form-outline py-2">
-                <label class="form-label">Cargo*</label>
-                <input type="text" class="form-control" required />
-            </div>
-        </div>
-        <div class="col-12 p-2 px-0">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
-                <label class="form-check-label " for="invalidCheck2">
-                    Eu concordo em receber comunicações via e-mail ou redes sociais.
-                </label>
-                <p>Ao informar meus dados, eu concordo com a <a
-                        href="/static/fcbsix/Política de Privacidade-FCBSIX.pdf">Política de Privacidade</a> da FCBSix.
-                </p>
-            </div>
-        </div>
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">Baixar o e-book</button>
-        </div>
-    </form>
-    <hr>
-    <form action="/fcbsix/delete" method="POST" class="col g-3" id="remove-container">
+    </div>
+
+    <!-- <form action="/fcbsix/delete" method="POST" class="col g-3" id="remove-container">
         {% csrf_token %}
         <div class="col-md">
-            <div class="form-outline py-2">
+            <div class="form-outline">
                 <label class="form-label">Email*</label>
                 <input name="name" type="text" class="form-control" required />
             </div>
@@ -65,8 +82,9 @@
         <div class="col-12">
             <button class="btn btn-primary" type="submit">Apagar meus dados</button>
         </div>
-    </form>
+    </form> -->
 
+    <img class="bottom-bar" src="/static/fcbsix/images/top-bar.png">
 </body>
 
 </html>

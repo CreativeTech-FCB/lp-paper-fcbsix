@@ -1,16 +1,110 @@
+@font-face {
+  font-family: NeverFinishedDisplay;
+  src: url(/static/fcbsix/fonts/NVRFNSHD-Display.otf);
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url(/static/fcbsix/fonts/GothamMedium.otf);
+}
+
 body {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background-image: url(/static/fcbsix/images/background.png);
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: NeverFinishedDisplay;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: GothamMedium;
+  font-size: 1.4em;
 }
 
 #form-container {
-  background-color: rgb(238, 238, 238);
+  font-family: GothamMedium;
+  color: white;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.187);
   padding: 20px;
-  margin: 50px;
-  max-width: 500px;
+  max-width: 450px;
+}
+
+.ebook-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.capa-ebook {
+  display: flex;
+}
+
+.capa-ebook img {
+  max-width: 450px;
+  box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.53);
+}
+
+.top-bar,
+.bottom-bar {
+  position: fixed;
+  height: 40px;
+  width: 100%;
+}
+
+.bottom-bar {
+  bottom: 0px;
+}
+
+.top-bar {
+  top: 0px;
+}
+
+.ebook-title,
+.ebook-subtitle {
+  color: white;
+}
+
+.ebook-title {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.ebook-subtitle {
+  margin-bottom: 35px;
+}
+
+.final-text {
+  font-size: 1em !important;
+  margin: 15px 0 0 0 ;
+}
+.final-text a {
+  color: rgb(255, 183, 0);
+}
+
+@media screen and (max-width: 1000px) {
+  .ebook-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .capa-ebook {
+    justify-content: center;
+    align-self: center;
+  }
+
+  .capa-ebook img {
+    width: 50%;
+  }
 }

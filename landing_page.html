@@ -1,13 +1,11 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/fcbsix/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/fcbsix/css/landing_page.css">
-
     <script src="/static/fcbsix/bootstrap/js/bootstrap.min.js"></script>
-
     <script src="/static/fcbsix/scripts/landing_page.js"></script>
-
 </head>
 
 <body>
@@ -25,7 +23,7 @@
             <h2 class="ebook-subtitle">Baixe aqui o paper completo!</h2>
 
             <form action="/fcbsix/new" method="POST" class="row g-3" id="form-container">
-                {% csrf_token %}
+                <!-- {% csrf_token %} -->
                 <div class="col-md-12">
                     <div class="form-outline">
                         <label class="form-label">Nome*</label>
@@ -42,7 +40,7 @@
                 <div class="col-md-6">
                     <div class="form-outline">
                         <label class="form-label">Empresa*</label>
-                        <input type="email" name="company" class="form-control" required />
+                        <input type="text" name="company" class="form-control" required />
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -54,13 +52,12 @@
                 <div class="col-12">
                     <div class="form-check">
                         <input class="form-check-input " type="checkbox" value="" id="invalidCheck2" required />
-                        <label class="form-check-label " for="invalidCheck2">
-                            Eu concordo em receber comunicações via <br> e-mail ou redes sociais.
+                        <label class="form-check-label" for="invalidCheck2">
+                            Eu concordo em receber comunicações via e-mail ou redes sociais.
                         </label>
                         <p class="final-text">Ao informar meus dados, eu concordo com a <a
                                 href="/static/fcbsix/Política de Privacidade-FCBSIX.pdf" target="_blank">Política
-                                de
-                                Privacidade</a> da FCBSix.
+                                de Privacidade</a> da FCBSix.
                         </p>
                     </div>
                 </div>
@@ -69,7 +66,9 @@
                 </div>
             </form>
         </div>
+        <img class="top-bar-mobile" src="/static/fcbsix/images/top-bar.png">
     </div>
+    <img class="bottom-bar" src="/static/fcbsix/images/top-bar.png">
 
     <!-- <form action="/fcbsix/delete" method="POST" class="col g-3" id="remove-container">
         {% csrf_token %}
@@ -84,7 +83,7 @@
         </div>
     </form> -->
 
-    <img class="bottom-bar" src="/static/fcbsix/images/top-bar.png">
+
 </body>
 
 </html>

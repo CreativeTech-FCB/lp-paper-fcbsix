@@ -46,6 +46,7 @@ body {
 
 .capa-ebook img {
   max-width: 450px;
+  height: auto;
   box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.53);
   -webkit-box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.53);
@@ -193,6 +194,7 @@ body {
 
   .capa-ebook img {
     width: 50%;
+    height: auto;
   }
 
   .ebook-title,

@@ -9,13 +9,11 @@
 </head>
 
 <body>
-    <img class="top-bar" src="/static/fcbsix/images/top-bar.png">
-
+    <div class="top-bar"></div>
     <div class="ebook-form-container">
         <div class="capa-ebook">
             <img src="/static/fcbsix/images/capa-ebook.png">
         </div>
-
         <div>
             <h1 class="ebook-title">
                 Quer saber mais?
@@ -65,23 +63,35 @@
                     <button class="btn btn-warning" type="submit">Baixar o e-book</button>
                 </div>
             </form>
-        </div>
-        <img class="top-bar-mobile" src="/static/fcbsix/images/top-bar.png">
-    </div>
-    <img class="bottom-bar" src="/static/fcbsix/images/top-bar.png">
 
-    <!-- <form action="/fcbsix/delete" method="POST" class="col g-3" id="remove-container">
-        {% csrf_token %}
-        <div class="col-md">
-            <div class="form-outline">
-                <label class="form-label">Email*</label>
-                <input name="name" type="text" class="form-control" required />
+            <p>
+                <a class="descadastrar" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Quero me descadastrar
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <form action="/fcbsix/delete" method="POST" class="col g-3 form-descadastrar" id="remove-container">
+                    <!-- {% csrf_token %} -->
+                    <div class="col-md">
+                        <div class="form-outline">
+                            <label class="form-label">Email*</label>
+                            <input name="name" type="email" class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Apagar meus dados</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">Apagar meus dados</button>
-        </div>
-    </form> -->
+        <div class="top-bar-mobile"><a href="https://fcbbrasil.com.br/" target="_blank"> <img class="logo-fcb"
+                    src="/static/fcbsix/images/logo-fcb.png"></a></div>
+    </div>
+    <div class="bottom-bar"> <a href="https://fcbbrasil.com.br/" target="_blank"> <img class="logo-fcb"
+                src="/static/fcbsix/images/logo-fcb.png"></a>
+    </div>
+
 
 
 </body>

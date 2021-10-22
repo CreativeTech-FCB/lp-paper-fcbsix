@@ -1,0 +1,112 @@
+@font-face {
+  font-family: NeverFinishedDisplay;
+  src: url(/static/fcbsix/fonts/NVRFNSHD-Display.otf);
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url(/static/fcbsix/fonts/GothamMedium.otf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url(/static/fcbsix/images/background.png);
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar,
+.bottom-bar {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background: rgb(249, 200, 13);
+}
+
+.bottom-bar {
+  bottom: 0px;
+  background: linear-gradient(
+    8deg,
+    rgba(249, 200, 13, 1) 0%,
+    rgba(213, 33, 106, 1) 24%,
+    rgba(134, 47, 123, 1) 52%,
+    rgba(11, 106, 178, 1) 100%
+  );
+}
+
+.icon{
+    width: 15vh;
+}
+
+.text-success {
+  color: white;
+  font-family: NeverFinishedDisplay;
+  font-size: 2em;
+  text-align: center;
+}
+
+.logo-fcb {
+  position: absolute;
+  height: 50%;
+  right: 1%;
+  top: 25%;
+}
+
+.top-bar {
+  top: 0px;
+  background: linear-gradient(
+    58deg,
+    rgba(249, 200, 13, 1) 0%,
+    rgba(232, 90, 54, 1) 23%,
+    rgba(158, 75, 115, 1) 50%,
+    rgba(81, 120, 182, 1) 100%
+  );
+}
+
+.top-bar-mobile {
+  display: none;
+  background: linear-gradient(
+    8deg,
+    rgba(249, 200, 13, 1) 0%,
+    rgba(213, 33, 106, 1) 24%,
+    rgba(134, 47, 123, 1) 52%,
+    rgba(11, 106, 178, 1) 100%
+  );
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+  }
+  .top-bar {
+    height: 20px;
+  }
+
+  .bottom-bar {
+    display: none;
+  }
+
+  .top-bar-mobile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .logo-fcb {
+    position: relative;
+  }
+}
